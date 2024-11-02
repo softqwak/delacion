@@ -1,0 +1,91 @@
+/* Общие стили для всего сайта
+
+*/
+
+html {
+    scroll-behavior: smooth; /* Включаем плавную прокрутку */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; /* Подберите строгий шрифт */
+    background-color: #fff; /* Белый фон */
+    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+    /* overflow-y: hidden; */
+    transition: all 0.3s ease;
+}
+
+.back-button {
+    position: fixed;
+    text-align: center;
+    height: 100%;
+    color: #000000;
+    align-items: center;
+    font-size: 2rem;
+    background-color: #f9e2ff;
+    font-family: 'Times New Roman';
+    padding: 10px 10px;
+    /* border: 1px solid #000; */
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: lowercase;
+    transition: all 0.3s ease;
+    justify-content: center;
+    flex-direction: column; /* Вертикальное размещение содержимого */
+    width: 0px;
+}
+
+.back-button:hover {
+    color: #242424;
+}
+
+/* Модальное окно FAQ */
+.faq-popup {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1000; /* На переднем плане */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    overflow: auto; /* Прокрутка при необходимости */
+}
+
+.faq-content {
+    background-color: #fff;
+    margin: 15% auto; /* Центрирование окна */
+    padding: 0px 40px;
+    border: 1px solid #888;
+    width: 80%; /* Ширина модального окна */
+    max-width: 600px; /* Максимальная ширина */
+    border-radius: 5px; /* Скругление углов */
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.faq-item {
+    margin: 15px 0; /* Отступы между элементами */
+}
+
+.faq-item h3 {
+    margin: 0; /* Убираем отступы */
+}
+
+.faq-item p {
+    margin-top: 5px; /* Отступ между заголовком и текстом */
+}

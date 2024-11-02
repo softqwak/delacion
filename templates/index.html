@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block links %}
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+{% endblock %}
+
+{% block navigation %}
+<li class="breadcrumb-item active" aria-current="page">Главная</li>
+
+{% endblock %}
+
+{% block content %}
+<div class="pd-5">
+    <h1>Добро пожаловать в наш мир музыки!</h1>
+    <p>Погрузитесь в атмосферу звуков и эмоций, которые вдохновляют нас каждый день.</p>
+</div>
+<div>
+    <a href="#" class="btn btn-primary small animated fadeInUp">Узнать больше</a>
+    <a href="#" class="btn btn-outline-secondary small animated fadeInUp">Связаться с нами</a>
+</div>
+
+
+<div class="row mt-md-4" style="margin-bottom: 1.5em;">
+    <div class="col-md-4 d-flex">
+        <div class="card flex-fill animated slideInUp">
+            <img src="static/images/start9.jpg" class="card-img-top" alt="Описание изображения">
+            <div class="card-body">
+                <h5 class="card-title">Создайте свой плейлист</h5>
+                <p class="card-text">Поделитесь своими любимыми треками с друзьями и создайте уникальную атмосферу.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 d-flex">
+        <div class="card flex-fill animated slideInUp">
+            <img src="static/images/startt.jpg" class="card-img-top " alt="Описание изображения">
+            <div class="card-body">
+                <h5 class="card-title">Ищите вдохновение</h5>
+                <p class="card-text">Откройте для себя новые жанры и исполнителей, которые вас удивят.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 d-flex">
+        <div class="card flex-fill animated slideInRight">
+            <img src="static/images/start88.jpg" class="card-img-top" alt="Описание изображения">
+            <div class="card-body">
+                <h5 class="card-title">Присоединяйтесь к сообществу</h5>
+                <p class="card-text">Станьте частью нашей музыкальной семьи и делитесь своими впечатлениями!</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

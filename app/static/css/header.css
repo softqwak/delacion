@@ -1,0 +1,318 @@
+
+/* Уникальная шапка сайта */
+.innovative-header {
+    position: relative;
+    height: 100vh; /* Уменьшенная высота шапки */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Прячем элементы, выходящие за пределы */
+}
+
+/* Эффект фона */
+.background-effect {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    filter: blur(20px); /* Размытие фона */
+    z-index: 0; /* Отправляем фон назад */
+}
+
+/* Логотип */
+.logo-container {
+    position: relative;
+    z-index: 1; /* Устанавливаем логотип выше фона */
+    height: 280px; /* Фиксированная высота блока с логотипом */
+    display:flex;
+    align-items: center; /* Центрируем логотип по вертикали */
+    height: 50%;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.logo-container:hover {
+    cursor:cell;
+}
+
+.logo {
+    font-size: 9.1em; /* Уменьшенный размер шрифта для логотипа */
+    color: #000000; /* Черный цвет текста для контраста */
+    margin: 0; /* Убираем отступы */
+    text-transform: lowercase; /* Преобразование в строчный регистр */
+    transition: transform 0.3s; /* Плавный переход при взаимодействии */
+    text-align: center;
+    transition: font-family 0.5s ease;
+}
+
+/* Стили для навигации */
+.nav-container {
+    z-index: 1; /* Устанавливаем навигацию выше фона */
+    margin-top: 20px; /* Отступ сверху для меню */
+}
+
+.nav-menu {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем отступы */
+    display: flex; /* Используем flex для навигационного меню */
+    gap: 40px; /* Расстояние между элементами меню */
+    font-family: "Georgia";
+    height: 30%;
+}
+
+.nav-item {
+    font-size: 1.1em;
+    color: #2e2e2e; /* Темно-серый цвет текста ссылок */
+    transition: transform 0.3s; /* Плавный переход */
+    cursor: pointer; /* Указываем курсор для клика */
+}
+
+.nav-item:hover {
+    transform: scale(1.1); /* Увеличение ссылки при наведении */
+}
+
+/* Кнопка меню для мобильных устройств */
+.menu-toggle {
+    display: none; /* Скрываем кнопку по умолчанию */
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1; /* Устанавливаем кнопку выше фона */
+    
+}
+
+.menu-toggle span {
+    width: 30px; /* Уменьшенная ширина полосок */
+    height: 3px; /* Уменьшенная высота полосок */
+    background-color: #333; /* Темно-серый цвет для полосок */
+    margin: 4px 0; /* Уменьшенные отступы между полосками */
+    transition: all 0.3s; /* Плавный переход */
+}
+
+/* Показать кнопку на маленьких экранах */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Показываем кнопку для мобильного меню */
+    }
+
+    .nav-menu {
+        display: none; /* Скрываем меню по умолчанию */
+        flex-direction: column; /* Вертикальное размещение на маленьких экранах */
+        align-items: center; /* Выравнивание по центру */
+        position: absolute; /* Фиксируем меню */
+        top: 100%; /* Расположение под шапкой */
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон для мобильного меню */
+        padding: 10px 0; /* Отступы для кликабельной области */
+    }
+
+    .nav-item {
+        font-size: 1.2em; /* Меньший размер шрифта для ссылок */
+        padding: 10px; /* Большие отступы для кликабельной области */
+    }
+
+    .nav-menu.show {
+        display: flex; /* Показать меню при активации */
+    }
+
+    .logo {
+        font-size: 5.8em;
+    }
+}
+
+
+.header-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Уменьшенная высота шапки */
+    display: flex;
+    justify-content: center; /* Центрирование элементов */
+    align-items: center;
+    background: rgb(247, 247, 247);
+    color: black;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+    transition: height 0.3s ease; /* Плавный переход при изменении размера */
+}
+
+.header-top.shrink {
+    height: 40px; /* Высота шапки при уменьшении */
+}
+
+.header-elements {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Расстояние между элементами */
+}
+
+.site-settings, .user-settings {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Расстояние между кнопками */
+
+}
+
+.site-settings:hover, .user-settings:hover {
+
+}
+
+.settings-btn, .user-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-size: 1.5em; /* Размер смайликов */
+    transition: transform 0.3s ease;
+    margin-bottom: 5px;
+    filter: grayscale(100%); 
+    
+}
+
+.settings-btn:hover, .user-btn:hover {
+    transform: scale(1.2); /* Увеличение кнопок при наведении */
+    filter: grayscale(0%); 
+}
+
+.divider {
+    height: 18px; /* Высота черты */
+    width: 1px;
+    background-color: rgb(179, 179, 179);
+    margin: 0 10px; /* Расстояние до соседних элементов */
+}
+
+/* .auth-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+    width: 100px;
+    font-size: 1.4em;
+} */
+
+.auth-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Окно авторизации */
+.auth-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-content {
+    background: white;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 30px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 1.7em;
+    cursor: pointer;
+    color: #333;
+}
+
+.form-description {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.auth-content form {
+    padding: 0 10px;
+}
+
+.auth-content label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.auth-content input[type="email"],
+.auth-content input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.auth-content input[type="email"]:focus,
+.auth-content input[type="password"]:focus {
+    border-color: #333;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.remember-me label {
+    margin-left: 5px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.auth-content button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.auth-content button[type="submit"]:hover {
+    background-color: #333;
+}
+
+.auth-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.secondary-btn {
+    font-size: 0.9em;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.secondary-btn:hover {
+    color: black;
+}

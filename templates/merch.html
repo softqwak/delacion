@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block links %}
+<style>
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        /* Увеличиваем карточки */
+        height: 350px;
+        /* Задайте нужную высоту для квадратной карточки */
+    }
+
+    .card-img-top {
+        height: 200px;
+        /* Устанавливаем высоту изображения */
+        object-fit: cover;
+        /* Обеспечивает заполнение области без искажения */
+    }
+
+    .card-hover:hover {
+        transform: scale(1.05);
+        /* Увеличение карточки при наведении */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        /* Тень при наведении */
+    }
+
+    .card-hover:active {
+        transform: scale(0.95);
+        /* Уменьшение карточки при нажатии */
+    }
+</style>
+{% endblock %}
+
+{% block navigation %}
+<li class="breadcrumb-item">
+    <a href="/" class="text-dark">Главная</a>
+</li>
+<li class="breadcrumb-item active" aria-current="page">Мерч</li>
+{% endblock %}
+
+{% block content %}
+<h1>Добро пожаловать в наш магазин!</h1>
+<p>Здесь представлены все товары</p>
+
+<div class="row mb-4">
+    <div class="col">
+        <input type="text" class="form-control" placeholder="Поиск...">
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card text-center card-hover">
+            <img src="static/images/anna.jpg" class="card-img-top" alt="Карточка 1">
+            <div class="card-body">
+                <h5 class="card-title">Название 1</h5>
+                <p class="card-text">Описание 1</p>
+                <p class="card-text">Цена: $10</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card text-center card-hover">
+            <img src="static/images/start9.jpg" class="card-img-top" alt="Карточка 2">
+            <div class="card-body">
+                <h5 class="card-title">Название 2</h5>
+                <p class="card-text">Описание 2</p>
+                <p class="card-text">Цена: $15</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card text-center card-hover">
+            <img src="static/images/start88.jpg" class="card-img-top" alt="Карточка 3">
+            <div class="card-body">
+                <h5 class="card-title">Название 3</h5>
+                <p class="card-text">Описание 3</p>
+                <p class="card-text">Цена: $20</p>
+            </div>
+        </div>
+    </div>
+    <!-- Добавьте дополнительные карточки по мере необходимости -->
+</div>
+
+
+{% endblock %}
