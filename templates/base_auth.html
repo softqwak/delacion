@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Главная</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Lobster|Pacifico&display=swap" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    {% block links %}
+    <style>
+        /* Отображение только конечного элемента на мобильных устройствах */
+        @media (max-width: 576px) {
+            .breadcrumb .breadcrumb-item.d-none.d-sm-inline {
+                display: none !important;
+            }
+        }
+    </style>
+    {% endblock %}
+</head>
+
+<body d-flex flex-column min-vh-100>
+    <!-- Шапка -->
+    <header class="small">
+        <nav class="navbar navbar-expand navbar-light bg-light fixed-top py-0"
+            style="font-size: 0.9rem; border-bottom: 1px solid #ddd;">
+            <div class="container">
+                <!-- Левая часть: Профиль -->
+                <a href="login" class="text-dark mr-auto">
+                    <i class="fas fa-sign-in-alt"></i>
+                </a>
+
+                <!-- Правая часть: ссылки на разделы -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="merch" class="nav-link text-dark">Мерч</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="concerts" class="nav-link text-dark">Концерты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="myorders" class="nav-link text-dark">Заказы</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Шапка для отображения пути страницы -->
+        <nav class="navbar navbar-light bg-white mt-1 mt-md-1 pt-5">
+            <div class="container p-0">
+                <!-- Адаптивный breadcrumb, видимый в каноничном виде на мобильных устройствах -->
+                <ol class="breadcrumb bg-white mb-0 p-0 w-100 d-flex">
+                    <li class="breadcrumb-item">
+                        <a href="/" class="text-dark">Delacion</a>
+                    </li>
+                    {% block navigation %}
+                    {% endblock %}
+                    <li class="breadcrumb-item active" aria-current="page"></li>
+                </ol>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="flex-grow-1" style="height: 80vh;">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Футер -->
+    <footer class="bg-light text-dark py-4 fixed-bottom">
+        <div class="container">
+            <div class="col-12 text-center small">
+                <p class="mb-0">&copy; 2024 delacion. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

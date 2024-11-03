@@ -1,0 +1,37 @@
+{% extends "base_auth.html" %}
+
+{% block links %}
+{% endblock %}
+
+{% block navigation %}
+<li class="breadcrumb-item active" aria-current="page">Авторизация</li>
+{% endblock %}
+
+{% block content %}
+<div class="container p-3 mt-4 md-4">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <h3 class="text-center">Вход</h3>
+            <form method="POST" action="">
+                <div class="form-group">
+                    <label for="email">Электронная почта</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Введите email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Введите пароль" required>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                    <label class="form-check-label" for="remember">Запомнить меня</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Войти</button>
+                <p class="text-center mt-3">
+                    <a href="password_reset">Забыли пароль?</a>
+                    <a href="register">Создать аккаунт</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

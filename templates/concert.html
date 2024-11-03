@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block links %}
+<style>
+
+    /* Параллакс секция */
+    .parallax-section {
+    position: relative;
+    height: 100vh; /* Полная высота экрана */
+    background: url('static/images/start33.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.parallax-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Затемнение фона */
+    z-index: 1;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.parallax-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.parallax-content p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* Анимация плавного исчезновения */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+
+{% endblock %}
+
+{% block navigation %}
+<li class="breadcrumb-item">
+    <a href="/" class="text-dark">Концерты</a>
+</li>
+<li class="breadcrumb-item active" aria-current="page">Emotional Party III</li>
+{% endblock %}
+
+{% block content %}
+<!-- Первая секция с параллакс-эффектом -->
+<div class="parallax-section p-0 m-0">
+    <div class="parallax-content">
+        <h1>Emotional Party III</h1>
+        <p>Концертный зал "Мечта"<br>15 ноября 2024</p>
+    </div>
+</div>
+
+{% endblock %}

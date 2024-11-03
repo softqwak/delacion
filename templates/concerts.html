@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block links %}
+<style>
+    .concert-card {
+        display: flex;
+        /* Используем флекс для разделения на две части */
+        margin-bottom: 30px;
+        /* Отступ между карточками */
+        height: 50vh;
+        /* Высота карточки */
+        border: 1px solid #ddd;
+        /* Граница карточки */
+        border-radius: 8px;
+        /* Закругленные углы */
+        overflow: hidden;
+        /* Скрыть переполнение */
+    }
+
+    .concert-info {
+        background-color: white;
+        /* Белый фон для информации */
+        padding: 20px;
+        /* Отступы внутри информационной части */
+        width: 40%;
+        /* Ширина левой части */
+        display: flex;
+        flex-direction: column;
+        /* Вертикальное выравнивание */
+        justify-content: space-between;
+        /* Распределение пространства */
+    }
+
+    .concert-image {
+        width: 60%;
+        /* Ширина правой части */
+        height: auto;
+        /* Высота автоматически для поддержания пропорций */
+    }
+
+    .card-title {
+        font-size: 1.5em;
+        /* Размер заголовка */
+        font-weight: bold;
+        /* Жирный текст */
+    }
+
+    .btn-buy {
+        margin-top: auto;
+        /* Чтобы кнопка располагалась внизу */
+        background-color: rgba(76, 175, 80, 1);
+        /* Зелёный фон кнопки */
+        color: white;
+        /* Цвет текста кнопки */
+        padding: 10px 15px;
+        /* Отступы внутри кнопки */
+        text-align: center;
+        /* Центрирование текста */
+    }
+</style>
+{% endblock %}
+
+{% block navigation %}
+<li class="breadcrumb-item active" aria-current="page">Концерты</li>
+{% endblock %}
+
+{% block content %}
+<div class="container p-3 mt-4 md-4">
+    <div class="concert-card">
+        <div class="concert-info">
+            <div>
+                <h5 class="card-title">Emotional Party III</h5>
+                <p>Дата: 15 ноября 2024 г.</p>
+                <p>Место: Концертный зал "Мечта"</p>
+                <p>Не пропустите уникальное выступление с яркой программой и незабываемыми моментами!</p>
+            </div>
+            <a href="concert?concert_id=3" class="btn btn-outline-success">Купить билет</a>
+        </div>
+        <img src="static/images/start33.jpg" class="concert-image" alt="Концерт Delacion">
+    </div>
+</div>
+{% endblock %}

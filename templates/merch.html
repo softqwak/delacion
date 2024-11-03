@@ -31,57 +31,38 @@
 {% endblock %}
 
 {% block navigation %}
-<li class="breadcrumb-item">
-    <a href="/" class="text-dark">Главная</a>
-</li>
 <li class="breadcrumb-item active" aria-current="page">Мерч</li>
 {% endblock %}
 
 {% block content %}
-<h1>Добро пожаловать в наш магазин!</h1>
-<p>Здесь представлены все товары</p>
+<div class="container p-3 mt-4 md-4">
 
-<div class="row mb-4">
-    <div class="col">
-        <input type="text" class="form-control" placeholder="Поиск...">
-    </div>
-    <div class="col-auto">
-        <button class="btn btn-primary"><i class="fas fa-search"></i></button>
-    </div>
-</div>
+    <h1>Добро пожаловать в наш магазин!</h1>
+    <p>Здесь представлены все товары</p>
 
-<div class="row">
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card text-center card-hover">
-            <img src="static/images/anna.jpg" class="card-img-top" alt="Карточка 1">
-            <div class="card-body">
-                <h5 class="card-title">Название 1</h5>
-                <p class="card-text">Описание 1</p>
-                <p class="card-text">Цена: $10</p>
-            </div>
+    <div class="row mb-4">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Поиск...">
+        </div>
+        <div class="col-auto">
+            <button class="btn btn-primary"><i class="fas fa-search"></i></button>
         </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card text-center card-hover">
-            <img src="static/images/start9.jpg" class="card-img-top" alt="Карточка 2">
-            <div class="card-body">
-                <h5 class="card-title">Название 2</h5>
-                <p class="card-text">Описание 2</p>
-                <p class="card-text">Цена: $15</p>
+
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-center card-hover">
+                <img src="static/images/anna.jpg" class="card-img-top" alt="Карточка 1">
+                <div class="card-body">
+                    <h5 class="card-title">Анна Загнозия</h5>
+                    <p class="card-text">Плакат формата А4</p>
+                    <p class="card-text">Цена: 200₽</p>
+                </div>
             </div>
         </div>
+        <!-- Добавьте дополнительные карточки по мере необходимости -->
+         
     </div>
-    <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="card text-center card-hover">
-            <img src="static/images/start88.jpg" class="card-img-top" alt="Карточка 3">
-            <div class="card-body">
-                <h5 class="card-title">Название 3</h5>
-                <p class="card-text">Описание 3</p>
-                <p class="card-text">Цена: $20</p>
-            </div>
-        </div>
-    </div>
-    <!-- Добавьте дополнительные карточки по мере необходимости -->
 </div>
 
 

@@ -1,25 +1,23 @@
 {% extends "base.html" %}
 
 {% block links %}
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
 {% endblock %}
 
 {% block navigation %}
-<li class="breadcrumb-item active" aria-current="page">Главная</li>
-
 {% endblock %}
 
 {% block content %}
-<div class="pd-5">
-    <h1>Добро пожаловать в наш мир музыки!</h1>
-    <p>Погрузитесь в атмосферу звуков и эмоций, которые вдохновляют нас каждый день.</p>
-</div>
-<div>
-    <a href="#" class="btn btn-primary small animated fadeInUp">Узнать больше</a>
-    <a href="#" class="btn btn-outline-secondary small animated fadeInUp">Связаться с нами</a>
+<div class="container p-3 mt-4 md-4">
+
+    <div class="mb-5">
+        <h1>Добро пожаловать в наш мир музыки!</h1>
+        <p>Погрузитесь в атмосферу звуков и эмоций, которые вдохновляют нас каждый день.
+            <a href="#" class="btn btn-link btn-sm small animated fadeInUp">Узнать больше</a>
+        </p>
+    </div>
 </div>
 
-
+<!-- 
 <div class="row mt-md-4" style="margin-bottom: 1.5em;">
     <div class="col-md-4 d-flex">
         <div class="card flex-fill animated slideInUp">
@@ -49,5 +47,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 {% endblock %}
